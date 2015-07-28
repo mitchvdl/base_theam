@@ -6,6 +6,7 @@
             <codePool>local</codePool>
             <depends>
                 <Theam_Base />
+                <Enterprise_Banner />
             </depends>
         </Theam_Page>
     </modules>
