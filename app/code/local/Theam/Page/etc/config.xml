@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Theam_Page>
+            <version>1.0.0.0</version>
+        </Theam_Page>
+    </modules>
+    <global>
+        <models>
+            <theam_page>
+                <class>Theam_Page_Model</class>
+                <resourceModel>theam_page_model_resource</resourceModel>
+            </theam_page>
+            <theam_base_model_resource>
+                <class>Theam_Page_Model_Resource</class>
+            </theam_base_model_resource>
+        </models>
+        <helpers>
+            <theam_page>
+                <class>Theam_Page_Helper</class>
+            </theam_page>
+        </helpers>
+        <blocks>
+            <theam_page>
+                <class>Theam_Page_Block</class>
+            </theam_page>
+        </blocks>
+    </global>
+</config>
