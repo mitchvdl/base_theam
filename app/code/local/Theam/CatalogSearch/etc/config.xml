@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Theam_CatalogSearch>
+            <version>1.0.0.0</version>
+        </Theam_CatalogSearch>
+    </modules>
+    <global>
+        <models>
+            <theam_catalogsearch>
+                <class>Theam_CatalogSearch_Model</class>
+                <resourceModel>theam_catalogsearch_model_resource</resourceModel>
+            </theam_catalogsearch>
+            <theam_catalogsearch_model_resource>
+                <class>Theam_CatalogSearch_Model_Resource</class>
+            </theam_catalogsearch_model_resource>
+        </models>
+        <helpers>
+            <theam_catalogsearch>
+                <class>Theam_CatalogSearch_Helper</class>
+            </theam_catalogsearch>
+        </helpers>
+        <blocks>
+            <theam_catalogsearch>
+                <class>Theam_CatalogSearch_Block</class>
+            </theam_catalogsearch>
+            <catalogsearch>
+                <rewrite>
+                    <advanced_form>Theam_CatalogSearch_Block_Advanced_Form</advanced_form>
+                </rewrite>
+            </catalogsearch>
+        </blocks>
+    </global>
+</config>
