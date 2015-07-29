@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Theam_Customer>
+            <version>1.0.0.0</version>
+        </Theam_Customer>
+    </modules>
+    <global>
+        <models>
+            <theam_customer>
+                <class>Theam_Customer_Model</class>
+                <resourceModel>theam_customer_model_resource</resourceModel>
+            </theam_customer>
+            <theam_customer_model_resource>
+                <class>Theam_Customer_Model_Resource</class>
+            </theam_customer_model_resource>
+        </models>
+        <helpers>
+            <theam_customer>
+                <class>Theam_Customer_Helper</class>
+            </theam_customer>
+        </helpers>
+        <blocks>
+            <theam_customer>
+                <class>Theam_Customer_Block</class>
+            </theam_customer>
+        </blocks>
+    </global>
+</config>

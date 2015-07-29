@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Theam_Customer>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Theam_Base />
+                <Mage_Customer />
+            </depends>
+        </Theam_Customer>
+    </modules>
+</config>
