@@ -26,4 +26,13 @@
             </theam_customer>
         </blocks>
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <theam_customer>
+                    <file>theam/customer.xml</file>
+                </theam_customer>
+            </updates>
+        </layout>
+    </frontend>
 </config>
