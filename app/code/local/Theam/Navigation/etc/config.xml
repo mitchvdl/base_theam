@@ -13,6 +13,17 @@
             </theam_navigation>
             <theam_navigation_model_resource>
                 <class>Theam_Navigation_Model_Resource</class>
+                <entities>
+                    <menu>
+                        <table>theam_megamenu_menu</table>
+                    </menu>
+                    <element>
+                        <table>theam_megamenu_element</table>
+                    </element>
+                    <update>
+                        <table>theam_megamenu_update</table>
+                    </update>
+                </entities>
             </theam_navigation_model_resource>
         </models>
         <helpers>
@@ -25,6 +36,14 @@
                 <class>Theam_Navigation_Block</class>
             </theam_navigation>
         </blocks>
+        <resources>
+            <theam_navigation_setup>
+                <setup>
+                    <module>Theam_Navigation</module>
+                    <class>Theam_Navigation_Model_Resource_Setup</class>
+                </setup>
+            </theam_navigation_setup>
+        </resources>
     </global>
     <frontend>
         <layout>

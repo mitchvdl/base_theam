@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <theam translate="title" module="theam_navigation">
+            <children>
+                <theam_navigation translate="title" module="theam_navigation">
+                    <title>Navigation</title>
+                    <action>adminhtml/theam_navigation/</action>
+                    <sort_order>500</sort_order>
+                </theam_navigation>
+            </children>
+        </theam>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <theam translate="title" module="theam_navigation">
+                        <title>Theam</title>
+                        <sort_order>30</sort_order>
+                        <children>
+                            <theam_navigation translate="title" module="theam_navigation">
+                                <title>Theam Base</title>
+                                <sort_order>500</sort_order>
+                            </theam_navigation>
+                        </children>
+                    </theam>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <!--<ayuhi translate="title" module="ayuhi_socialconnect">
+                                        <title>Ayuhi Extensions Section</title>
+                                    </ayuhi>-->
+                                    <theam_navigation translate="title" module="theam_navigation">
+                                        <title>Navigation</title>
+                                    </theam_navigation>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

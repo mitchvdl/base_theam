@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <theam translate="title" module="theam_base">
+            <title>Theam Extensions</title>
+            <sort_order>30</sort_order>
+            <children>
+                <!--<theam_base translate="title" module="theam_base">-->
+                    <!--<title>Theam Base</title>-->
+                    <!--&lt;!&ndash;<action>adminhtml/ayuhi_socialconnect/</action>&ndash;&gt;-->
+                    <!--<sort_order>15</sort_order>-->
+                <!--</theam_base>-->
+            </children>
+        </theam>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <theam translate="title" module="theam_base">
+                        <title>Theam</title>
+                        <sort_order>30</sort_order>
+                        <children>
+                            <!--<theam_base translate="title" module="theam_base">-->
+                                <!--<title>Theam Base</title>-->
+                                <!--<sort_order>15</sort_order>-->
+                            <!--</theam_base>-->
+                        </children>
+                    </theam>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <!--<ayuhi translate="title" module="ayuhi_socialconnect">
+                                        <title>Ayuhi Extensions Section</title>
+                                    </ayuhi>-->
+                                    <theam_base translate="title" module="theam_base">
+                                        <title>Theam Base</title>
+                                    </theam_base>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
