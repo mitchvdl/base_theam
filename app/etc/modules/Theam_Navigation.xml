@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Theam_Navigation>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Theam_Base/>
+            </depends>
+        </Theam_Navigation>
+    </modules>
+</config>

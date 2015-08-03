@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Theam_Navigation>
+            <version>1.0.0.0</version>
+        </Theam_Navigation>
+    </modules>
+    <global>
+        <models>
+            <theam_navigation>
+                <class>Theam_Navigation_Model</class>
+                <resourceModel>theam_navigation_model_resource</resourceModel>
+            </theam_navigation>
+            <theam_navigation_model_resource>
+                <class>Theam_Navigation_Model_Resource</class>
+            </theam_navigation_model_resource>
+        </models>
+        <helpers>
+            <theam_navigation>
+                <class>Theam_Navigation_Helper</class>
+            </theam_navigation>
+        </helpers>
+        <blocks>
+            <theam_navigation>
+                <class>Theam_Navigation_Block</class>
+            </theam_navigation>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <theam_navigation>
+                    <file>theam/navigation.xml</file>
+                </theam_navigation>
+            </updates>
+        </layout>
+    </frontend>
+</config>
