@@ -45,6 +45,35 @@
             </theam_navigation_setup>
         </resources>
     </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <theam_navigation after="Mage_Adminhtml">Theam_Navigation_Adminhtml</theam_navigation>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <theam_navigation>
+                    <file>theam/navigation.xml</file>
+                </theam_navigation>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <theam_navigation>
+                    <files>
+                        <default>Theam_Navigation.csv</default>
+                    </files>
+                </theam_navigation>
+            </modules>
+        </translate>
+    </adminhtml>
     <frontend>
         <layout>
             <updates>

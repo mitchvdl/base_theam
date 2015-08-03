@@ -26,6 +26,36 @@
             </theam_base>
         </blocks>
     </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <theam_base after="Mage_Adminhtml">Theam_Base_Adminhtml</theam_base>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <theam_base>
+                    <file>theam/base.xml</file>
+                </theam_base>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <theam_base>
+                    <files>
+                        <default>Theam_Base.csv</default>
+                    </files>
+                </theam_base>
+            </modules>
+        </translate>
+    </adminhtml>
+
     <frontend>
         <layout>
             <updates>
