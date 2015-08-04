@@ -17,6 +17,9 @@
                     <menu>
                         <table>theam_megamenu_menu</table>
                     </menu>
+                    <flat>
+                        <table>theam_megamenu_flat</table>
+                    </flat>
                     <element>
                         <table>theam_megamenu_element</table>
                     </element>
