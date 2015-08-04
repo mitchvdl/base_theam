@@ -59,9 +59,9 @@
     <frontend>
         <layout>
             <updates>
-                <theam_customer>
+                <theam_base>
                     <file>theam/catalog.xml</file>
-                </theam_customer>
+                </theam_base>
             </updates>
         </layout>
     </frontend>

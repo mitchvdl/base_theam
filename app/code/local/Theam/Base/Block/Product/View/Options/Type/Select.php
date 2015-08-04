@@ -66,7 +66,7 @@ class Theam_Base_Block_Product_View_Options_Type_Select extends Mage_Catalog_Blo
         if ($_option->getType() == Mage_Catalog_Model_Product_Option::OPTION_TYPE_RADIO
             || $_option->getType() == Mage_Catalog_Model_Product_Option::OPTION_TYPE_CHECKBOX
         ) {
-            $selectHtml = '<ul id="options-'.$_option->getId().'-list" class="options-list">';
+            $selectHtml = '<div id="options-'.$_option->getId().'-list" class="options-list ">';
             $require = ($_option->getIsRequire()) ? ' validate-one-required-by-name' : '';
             $arraySign = '';
             switch ($_option->getType()) {
@@ -74,11 +74,14 @@ class Theam_Base_Block_Product_View_Options_Type_Select extends Mage_Catalog_Blo
                     $type = 'radio';
                     $class = 'radio';
                     if (!$_option->getIsRequire()) {
-                        $selectHtml .= '<li><input type="radio" id="options_' . $_option->getId() . '" class="'
+                        $selectHtml .= '<div class="' . $type . '">'
+                            . '<label for="options_' . $_option->getId() . '">' . $this->__('None')
+                            . '<input type="radio" id="options_' . $_option->getId() . '" class="'
                             . $class . ' product-custom-option" name="options[' . $_option->getId() . ']"'
                             . ($this->getSkipJsReloadPrice() ? '' : ' onclick="opConfig.reloadPrice()"')
-                            . ' value="" checked="checked" /><span class="label"><label for="options_'
-                            . $_option->getId() . '">' . $this->__('None') . '</label></span></li>';
+                            . ' value="" checked="checked" />'
+                            . '</label>'
+                            . '</div>';
                     }
                     break;
                 case Mage_Catalog_Model_Product_Option::OPTION_TYPE_CHECKBOX:
@@ -103,23 +106,28 @@ class Theam_Base_Block_Product_View_Options_Type_Select extends Mage_Catalog_Blo
                     $checked = $configValue == $htmlValue ? 'checked' : '';
                 }
 
-                $selectHtml .= '<li>' . '<input type="' . $type . '" class="' . $class . ' ' . $require
+                $selectHtml .= '<div class="' . $type . '">'
+                    . '<label for="options_' . $_option->getId() . '_' . $count . '">'
+                    . '<input type="' . $type . '" class="' . $class . ' ' . $require
                     . ' product-custom-option"'
                     . ($this->getSkipJsReloadPrice() ? '' : ' onclick="opConfig.reloadPrice()"')
                     . ' name="options[' . $_option->getId() . ']' . $arraySign . '" id="options_' . $_option->getId()
                     . '_' . $count . '" value="' . $htmlValue . '" ' . $checked . ' price="'
                     . $this->helper('core')->currencyByStore($_value->getPrice(true), $store, false) . '" />'
-                    . '<span class="label"><label for="options_' . $_option->getId() . '_' . $count . '">'
-                    . $_value->getTitle() . ' ' . $priceStr . '</label></span>';
+                    . ''
+                    . $_value->getTitle() . ' ' . $priceStr
+                    . '</label>'
+                    . '</div>';
+
                 if ($_option->getIsRequire()) {
                     $selectHtml .= '<script type="text/javascript">' . '$(\'options_' . $_option->getId() . '_'
                         . $count . '\').advaiceContainer = \'options-' . $_option->getId() . '-container\';'
                         . '$(\'options_' . $_option->getId() . '_' . $count
                         . '\').callbackFunction = \'validateOptionsCallback\';' . '</script>';
                 }
-                $selectHtml .= '</li>';
+                $selectHtml .= '</label>';
             }
-            $selectHtml .= '</ul>';
+            $selectHtml .= '</div>';
 
             return $selectHtml;
         }
