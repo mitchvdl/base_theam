@@ -1,0 +1,76 @@
+{
+  "name": "theam/base",
+  "type": "magento-module",
+  "license":"OSL-3.0",
+  "description":"Theam Base project",
+  "authors":[
+    {
+      "name":"Mitch Vanderlinden",
+      "email":"mitchvdl@gmail.com"
+    }
+  ],
+  "extra": {
+    "map": [
+      [
+        "app/code/local/Theam/Base",
+        "app/code/local/Theam/Base"
+      ],
+      [
+        "app/code/local/Theam/CatalogSearch",
+        "app/code/local/Theam/CatalogSearch"
+      ],
+      [
+        "app/code/local/Theam/Customer",
+        "app/code/local/Theam/Customer"
+      ],
+      [
+        "app/code/local/Theam/Design",
+        "app/code/local/Theam/Design"
+      ],
+      [
+        "app/code/local/Theam/Navigation",
+        "app/code/local/Theam/Navigation"
+      ],
+      [
+        "app/code/local/Theam/Page",
+        "app/code/local/Theam/Page"
+      ],
+      [
+        "app/code/local/Theam/Widget",
+        "app/code/local/Theam/Widget"
+      ],
+      [
+        "app/etc/modules/Theam_Base.xml",
+        "app/etc/modules/Theam_Base.xml"
+      ],
+      [
+        "app/etc/modules/Theam_CatalogSearch.xml",
+        "app/etc/modules/Theam_CatalogSearch.xml"
+      ],
+      [
+        "app/etc/modules/Theam_Customer.xml",
+        "app/etc/modules/Theam_Customer.xml"
+      ],
+      [
+        "app/etc/modules/Theam_Design.xml",
+        "app/etc/modules/Theam_Design.xml"
+      ],
+      [
+        "app/etc/modules/Theam_Navigation.xml",
+        "app/etc/modules/Theam_Navigation.xml"
+      ],
+      [
+        "app/etc/modules/Theam_Page.xml",
+        "app/etc/modules/Theam_Page.xml"
+      ],
+      [
+        "app/etc/modules/Theam_Widget.xml",
+        "app/etc/modules/Theam_Widget.xml"
+      ],
+      [
+        "app/etc/local.xml",
+        "app/etc/local.xml"
+      ]
+    ]
+  }
+}
