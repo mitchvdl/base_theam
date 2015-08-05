@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Theam_Review>
+            <version>1.0.0.0</version>
+        </Theam_Review>
+    </modules>
+    <global>
+        <models>
+            <theam_review>
+                <class>Theam_Review_Model</class>
+                <resourceModel>theam_review_model_resource</resourceModel>
+            </theam_review>
+            <theam_review_model_resource>
+                <class>Theam_Review_Model_Resource</class>
+            </theam_review_model_resource>
+        </models>
+        <helpers>
+            <theam_review>
+                <class>Theam_Review_Helper</class>
+            </theam_review>
+        </helpers>
+        <blocks>
+            <theam_review>
+                <class>Theam_Review_Block</class>
+            </theam_review>
+        </blocks>
+    </global>
+</config>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <theam>
+            <children>
+                <!--<theam_base translate="title" module="theam_base">-->
+                    <!--<title>Theam Base</title>-->
+                    <!--&lt;!&ndash;<action>adminhtml/ayuhi_socialconnect/</action>&ndash;&gt;-->
+                    <!--<sort_order>15</sort_order>-->
+                <!--</theam_base>-->
+            </children>
+        </theam>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <theam>
+                        <children>
+                            <!--<theam_base translate="title" module="theam_base">-->
+                                <!--<title>Theam Base</title>-->
+                                <!--<sort_order>15</sort_order>-->
+                            <!--</theam_base>-->
+                        </children>
+                    </theam>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <theam_review translate="title" module="theam_review">
+                                        <title>Theam Review</title>
+                                    </theam_review>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
