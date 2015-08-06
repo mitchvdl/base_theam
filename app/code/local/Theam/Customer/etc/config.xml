@@ -34,5 +34,32 @@
                 </theam_customer>
             </updates>
         </layout>
+        <events>
+            <customer_login>
+                <observers>
+                    <theam_customer>
+                        <class>theam_customer/observer</class>
+                        <method>customerLogin</method>
+                    </theam_customer>
+                </observers>
+            </customer_login>
+            <controller_action_postdispatch_customer_account_logoutSuccess>
+                <observers>
+                    <theam_customer>
+                        <class>theam_customer/observer</class>
+                        <method>customerLogout</method>
+                    </theam_customer>
+                </observers>
+            </controller_action_postdispatch_customer_account_logoutSuccess>
+            <wishlist_save_after>
+                <observers>
+                    <theam_customer>
+                        <class>theam_customer/observer</class>
+                        <method>updateWishList</method>
+                    </theam_customer>
+                </observers>
+            </wishlist_save_after>
+        </events>
     </frontend>
+
 </config>
