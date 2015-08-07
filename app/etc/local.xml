@@ -43,7 +43,7 @@
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[www-data]]></username>
                     <password><![CDATA[]]></password>
-                    <dbname><![CDATA[ee14_test]]></dbname>
+                    <dbname><![CDATA[theam_test]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
