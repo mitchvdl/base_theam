@@ -3,6 +3,8 @@
   "type": "magento-module",
   "license":"OSL-3.0",
   "description":"Theam Base project",
+  "minimum-stability": "dev",
+
   "authors":[
     {
       "name":"Mitch Vanderlinden",
@@ -13,6 +15,7 @@
     "magento-hackathon/magento-composer-installer": "*",
     "composer/composer": "~1.0.0@alpha"
   },
+
   "extra": {
     "map": [
       [
