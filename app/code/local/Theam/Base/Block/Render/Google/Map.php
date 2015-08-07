@@ -36,5 +36,10 @@ class Theam_Base_Block_Render_Google_Map extends Mage_Core_Block_Template
         }
         return $this->getData('zoom_level');
     }
+
+    public function getMapVariable()
+    {
+        return sprintf('map_%s', substr(sha1(implode('|'. $this->getData())), 0, 8));
+    }
 }
  
