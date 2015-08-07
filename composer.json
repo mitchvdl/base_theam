@@ -12,8 +12,6 @@
   "require" : {
     "magento-hackathon/magento-composer-installer": "*"
   },
-
-  "minimum-stability": "dev",
   "extra": {
     "map": [
       [
