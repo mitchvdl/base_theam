@@ -10,7 +10,8 @@
     }
   ],
   "require" : {
-    "magento-hackathon/magento-composer-installer": "*"
+    "magento-hackathon/magento-composer-installer": "*",
+    "composer/composer": "~1.0.0@alpha"
   },
   "extra": {
     "map": [
