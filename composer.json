@@ -3,7 +3,8 @@
   "type": "magento-module",
   "license":"OSL-3.0",
   "description":"Theam Base project",
-  "version" : "1.0.0.0",
+  "minimum-stability": "dev",
+
   "authors":[
     {
       "name":"Mitch Vanderlinden",
@@ -11,13 +12,11 @@
     }
   ],
   "require" : {
-    "magento-hackathon/magento-composer-installer": "*"
+    "magento-hackathon/magento-composer-installer": "*",
+    "composer/composer": "~1.0.0@alpha"
   },
-  "minimum-stability": "dev",
+
   "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    },
     "map": [
       [
         "app/code/local/Theam/Base",
@@ -46,34 +45,6 @@
       [
         "app/code/local/Theam/Widget",
         "app/code/local/Theam/Widget"
-      ],
-      [
-        "app/etc/modules/Theam_Base.xml",
-        "app/etc/modules/Theam_Base.xml"
-      ],
-      [
-        "app/etc/modules/Theam_CatalogSearch.xml",
-        "app/etc/modules/Theam_CatalogSearch.xml"
-      ],
-      [
-        "app/etc/modules/Theam_Customer.xml",
-        "app/etc/modules/Theam_Customer.xml"
-      ],
-      [
-        "app/etc/modules/Theam_Design.xml",
-        "app/etc/modules/Theam_Design.xml"
-      ],
-      [
-        "app/etc/modules/Theam_Navigation.xml",
-        "app/etc/modules/Theam_Navigation.xml"
-      ],
-      [
-        "app/etc/modules/Theam_Page.xml",
-        "app/etc/modules/Theam_Page.xml"
-      ],
-      [
-        "app/etc/modules/Theam_Widget.xml",
-        "app/etc/modules/Theam_Widget.xml"
       ],
       [
         "app/etc/local.xml",
