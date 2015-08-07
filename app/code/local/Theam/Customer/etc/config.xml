@@ -62,4 +62,13 @@
         </events>
     </frontend>
 
+    <default>
+        <general>
+            <store_information>
+                <display_map>1</display_map>
+                <longitude>51.014733</longitude>
+                <latitude>5.730851</latitude>
+            </store_information>
+        </general>
+    </default>
 </config>
