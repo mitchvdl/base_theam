@@ -42,6 +42,14 @@
             <groups>
                 <store_information>
                     <fields>
+                        <mobile translate="label">
+                            <label>Store Contact Mobie Telephone</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mobile>
                         <display_map translate="label comment">
                             <label>Display Google map on contact page</label>
                             <frontend_type>select</frontend_type>
@@ -67,6 +75,30 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </latitude>
+                        <address_billing translate="label">
+                            <label>Store Contact Address Billing</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </address_billing>
+                        <address_sales translate="label">
+                            <label>Store Contact Address Sales</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </address_sales>
+                        <address_pickup translate="label">
+                            <label>Store Contact Address Pickup</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </address_pickup>
                     </fields>
                 </store_information>
             </groups>
