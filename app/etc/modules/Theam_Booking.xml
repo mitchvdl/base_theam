@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <modules>
-        <Theam_CatalogSearch>
+        <Theam_Booking>
             <active>true</active>
             <codePool>local</codePool>
             <depends>
                 <Theam_Base />
-                <Mage_CatalogSearch />
+                <Mage_Contacts />
             </depends>
-        </Theam_CatalogSearch>
+        </Theam_Booking>
     </modules>
 </config>

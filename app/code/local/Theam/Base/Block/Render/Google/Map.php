@@ -39,7 +39,7 @@ class Theam_Base_Block_Render_Google_Map extends Mage_Core_Block_Template
 
     public function getMapVariable()
     {
-        return sprintf('map_%s', substr(sha1(implode('|'. $this->getData())), 0, 8));
+        return sprintf('map_%s', substr(sha1(implode('|', $this->getData())), 0, 8));
     }
 }
  
