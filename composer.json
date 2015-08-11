@@ -29,6 +29,14 @@
       ["app/code/local/Theam/Page","app/code/local/Theam/Page"],
       ["app/code/local/Theam/Widget","app/code/local/Theam/Widget"],
       ["app/code/local/Theam/Booking","app/code/local/Theam/Booking"],
+      ["app/etc/modules/Theam_Base.xml","app/etc/modules/Theam_Base.xml"],
+      ["app/etc/modules/Theam_CatalogSearch.xml","app/etc/modules/Theam_CatalogSearch.xml"],
+      ["app/etc/modules/Theam_Customer.xml","app/etc/modules/Theam_Customer.xml"],
+      ["app/etc/modules/Theam_Design.xml","app/etc/modules/Theam_Design.xml"],
+      ["app/etc/modules/Theam_Navigation.xml","app/etc/modules/Theam_Navigation.xml"],
+      ["app/etc/modules/Theam_Page.xml","app/etc/modules/Theam_Page.xml"],
+      ["app/etc/modules/Theam_Widget.xml","app/etc/modules/Theam_Widget.xml"],
+      ["app/etc/modules/Theam_Booking.xml","app/etc/modules/Theam_Booking.xml"],
       ["app/etc/local.xml","app/etc/local.xml"
       ]
     ]
