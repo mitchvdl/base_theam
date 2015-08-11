@@ -17,6 +17,9 @@
   },
 
   "extra": {
+    "branch-alias": {
+      "dev-master": "1.x.x-dev"
+    },
     "map": [
       ["app/code/local/Theam/Base","app/code/local/Theam/Base"],
       ["app/code/local/Theam/CatalogSearch","app/code/local/Theam/CatalogSearch"],
