@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <modules>
-        <Theam_Page>
-            <active>true</active>
+        <Theam_Widget>
+            <active>false</active>
             <codePool>local</codePool>
             <depends>
                 <Theam_Base />
                 <Enterprise_Banner />
             </depends>
-        </Theam_Page>
+        </Theam_Widget>
     </modules>
 </config>
