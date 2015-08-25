@@ -17,18 +17,19 @@
         </routers>
         <translate>
             <modules>
-                <Mage_Contacts>
+                <Theam_Booking>
                     <files>
                         <default>Theam_Booking.csv</default>
+                        <fallback>Mage_Contacts.csv</fallback>
                     </files>
-                </Mage_Contacts>
+                </Theam_Booking>
             </modules>
         </translate>
         <layout>
             <updates>
-                <contact>
-                    <file>theam_booking.xml</file>
-                </contact>
+                <Theam_Booking>
+                    <file>theam/booking.xml</file>
+                </Theam_Booking>
             </updates>
         </layout>
     </frontend>
