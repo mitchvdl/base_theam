@@ -28,7 +28,7 @@
         </resources>
 
         <cache>
-            <backend>Cm_Cache_Backend_Redis</backend>
+            <backend>Cm_RedisSession_Model_Session</backend>
             <backend_options>
                 <server>127.0.0.1</server> <!-- or absolute path to unix socket for better performance -->
                 <port>6379</port>
@@ -45,26 +45,26 @@
             </backend_options>
         </cache>
 
-        <!-- example of redis full page cache -->
-        <full_page_cache>
-            <backend>Cm_Cache_Backend_Redis</backend>
-            <backend_options>
-                <server>127.0.0.1</server> <!-- or absolute path to unix socket for better performance -->
-                <port>6379</port>
-                <database>7</database>
-                <password></password>
-                <force_standalone>0</force_standalone>  <!-- 0 for phpredis, 1 for standalone PHP -->
-                <connect_retries>1</connect_retries>    <!-- Reduces errors due to random connection failures -->
-                <automatic_cleaning_factor>0</automatic_cleaning_factor> <!-- Disabled by default -->
-                <!-- in FPC data is already gzipped, no need to do this twice -->
-                <compress_data>0</compress_data>  <!-- 0-9 for compression level, recommended: 0 or 1 -->
-                <compress_tags>1</compress_tags>  <!-- 0-9 for compression level, recommended: 0 or 1 -->
-                <compress_threshold>20480</compress_threshold>  <!-- Strings below this size will not be compressed -->
-                <compression_lib>gzip</compression_lib> <!-- Supports gzip, lzf and snappy -->
-                <lifetimelimit>43200</lifetimelimit> <!-- set lifetime for keys without TTL -->
-                <persistent>2</persistent>
-            </backend_options>
-        </full_page_cache>
+        <!--&lt;!&ndash; example of redis full page cache &ndash;&gt;-->
+        <!--<full_page_cache>-->
+            <!--<backend>Cm_Cache_Backend_Redis</backend>-->
+            <!--<backend_options>-->
+                <!--<server>127.0.0.1</server> &lt;!&ndash; or absolute path to unix socket for better performance &ndash;&gt;-->
+                <!--<port>6379</port>-->
+                <!--<database>7</database>-->
+                <!--<password></password>-->
+                <!--<force_standalone>0</force_standalone>  &lt;!&ndash; 0 for phpredis, 1 for standalone PHP &ndash;&gt;-->
+                <!--<connect_retries>1</connect_retries>    &lt;!&ndash; Reduces errors due to random connection failures &ndash;&gt;-->
+                <!--<automatic_cleaning_factor>0</automatic_cleaning_factor> &lt;!&ndash; Disabled by default &ndash;&gt;-->
+                <!--&lt;!&ndash; in FPC data is already gzipped, no need to do this twice &ndash;&gt;-->
+                <!--<compress_data>0</compress_data>  &lt;!&ndash; 0-9 for compression level, recommended: 0 or 1 &ndash;&gt;-->
+                <!--<compress_tags>1</compress_tags>  &lt;!&ndash; 0-9 for compression level, recommended: 0 or 1 &ndash;&gt;-->
+                <!--<compress_threshold>20480</compress_threshold>  &lt;!&ndash; Strings below this size will not be compressed &ndash;&gt;-->
+                <!--<compression_lib>gzip</compression_lib> &lt;!&ndash; Supports gzip, lzf and snappy &ndash;&gt;-->
+                <!--<lifetimelimit>43200</lifetimelimit> &lt;!&ndash; set lifetime for keys without TTL &ndash;&gt;-->
+                <!--<persistent>2</persistent>-->
+            <!--</backend_options>-->
+        <!--</full_page_cache>-->
 
         <!-- example of redis session storage -->
         <session_save>db</session_save>
