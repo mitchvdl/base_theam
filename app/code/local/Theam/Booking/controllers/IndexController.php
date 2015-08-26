@@ -9,10 +9,10 @@
 class Theam_Booking_IndexController extends Mage_Core_Controller_Front_Action
 {
 
-    const XML_PATH_EMAIL_RECIPIENT  = 'contacts/email/recipient_email';
-    const XML_PATH_EMAIL_SENDER     = 'contacts/email/sender_email_identity';
-    const XML_PATH_EMAIL_TEMPLATE   = 'contacts/email/email_template';
-    const XML_PATH_ENABLED          = 'contacts/contacts/enabled';
+    const XML_PATH_EMAIL_RECIPIENT  = 'theam_booking/email/recipient_email';
+    const XML_PATH_EMAIL_SENDER     = 'theam_booking/email/sender_email_identity';
+    const XML_PATH_EMAIL_TEMPLATE   = 'theam_booking/email/email_template';
+    const XML_PATH_ENABLED          = 'theam_booking/contacts/enabled';
 
     public function preDispatch()
     {
@@ -27,7 +27,7 @@ class Theam_Booking_IndexController extends Mage_Core_Controller_Front_Action
     {
         $this->loadLayout();
         $this->getLayout()->getBlock('contactForm')
-            ->setFormAction( Mage::getUrl('*/*/post') );
+            ->setFormAction( Mage::getUrl('*/*/post', array('product_id' => $this->getRequest()->getParam('product_id', false))) );
 
         $this->_initLayoutMessages('customer/session');
         $this->_initLayoutMessages('catalog/session');
@@ -44,6 +44,8 @@ class Theam_Booking_IndexController extends Mage_Core_Controller_Front_Action
             try {
                 $postObject = new Varien_Object();
                 $postObject->setData($post);
+                /** Mage_Core_Model_Session $session */
+                $session = Mage::getSingleton('core/session')->setBookingData($postObject);
 
                 $error = false;
 
@@ -51,15 +53,25 @@ class Theam_Booking_IndexController extends Mage_Core_Controller_Front_Action
                     $error = true;
                 }
 
-                if (!Zend_Validate::is(trim($post['comment']) , 'NotEmpty')) {
-                    $error = true;
-                }
-
                 if (!Zend_Validate::is(trim($post['email']), 'EmailAddress')) {
                     $error = true;
                 }
 
-                if (Zend_Validate::is(trim($post['hideit']), 'NotEmpty')) {
+                if (!Zend_Validate::is(trim($post['product']), 'NotEmpty')) {
+                    Mage::getSingleton('customer/session')->addError(Mage::helper('contacts')->__('No product has been selected, please visit the product page and try again'));
+                    $error = true;
+                }
+
+                if (!Zend_Validate::is(trim($post['telephone']), 'NotEmpty')) {
+                    $error = true;
+                }
+
+                if (!Zend_Validate::is(trim($post['selected_options']), 'NotEmpty')) {
+                    Mage::getSingleton('customer/session')->addError(Mage::helper('contacts')->__('No product has been selected, please visit the product page and try again'));
+                    $error = true;
+                }
+
+                if (!Zend_Validate::is(trim($post['date']), 'NotEmpty')) {
                     $error = true;
                 }
 
@@ -82,6 +94,7 @@ class Theam_Booking_IndexController extends Mage_Core_Controller_Front_Action
                     throw new Exception();
                 }
 
+                Mage::getSingleton('core/session')->unsBookingData();
                 $translate->setTranslateInline(true);
 
                 Mage::getSingleton('customer/session')->addSuccess(Mage::helper('contacts')->__('Your inquiry was submitted and will be responded to as soon as possible. Thank you for contacting us.'));

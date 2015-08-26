@@ -32,6 +32,9 @@
                 </Theam_Booking>
             </updates>
         </layout>
+        <jstranslate>
+            <file>jstranslator.xml</file>
+        </jstranslate>
     </frontend>
     <global>
         <resources>

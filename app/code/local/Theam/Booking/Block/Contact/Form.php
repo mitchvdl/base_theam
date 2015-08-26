@@ -11,10 +11,13 @@ class Theam_Booking_Block_Contact_Form extends Mage_Core_Block_Template
 
     protected $_product = null;
 
+    /**
+     * @return Mage_Catalog_Model_Product
+     */
     public function getProduct()
     {
         if ( null === $this->_product ) {
-            $productId = Mage::app()->getRequest()->get('product_id', false);
+            $productId = Mage::app()->getRequest()->getParam('product_id', false);
             if ( $productId === false ) {
                 $this->_product = Mage::getModel('catalog/product');
             } else {
@@ -44,9 +47,12 @@ class Theam_Booking_Block_Contact_Form extends Mage_Core_Block_Template
 
         $options = Mage::app()->getRequest()->getparam('options', []);
         foreach ( $options as $_idx => $_val) {
-            $values = Mage::getModel('catalog/product_option')->load($_idx);
-            Zend_Debug::dump($values);
+            $_options = $this->getProduct()->getOptionById($_val)->getValues();
+            if ( isset($_options[$_idx]) ) {
+                $_tmpOptionValue = $_options[$_idx];
+                $attributeMap[] = $_tmpOptionValue->getTitle();
+            }
         }
         return $attributeMap;
-}
+    }
 }

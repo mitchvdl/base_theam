@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<jstranslator>
+    <validate-phone-international-theam-booking translate="message" module="theam_booking">
+        <message>Please enter a valid phone number. For example (123) 456-7890 or +32 498 963 258.</message>
+    </validate-phone-international-theam-booking>
+</jstranslator>
