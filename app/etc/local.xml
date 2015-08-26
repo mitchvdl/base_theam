@@ -14,10 +14,10 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[mitchvdl.be.mysql]]></host>
-                    <username><![CDATA[mitchvdl_be]]></username>
-                    <password><![CDATA[22ygF4Yv]]></password>
-                    <dbname><![CDATA[mitchvdl_be]]></dbname>
+                    <host><![CDATA[]]></host>
+                    <username><![CDATA[]]></username>
+                    <password><![CDATA[]]></password>
+                    <dbname><![CDATA[]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
