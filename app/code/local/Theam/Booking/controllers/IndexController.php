@@ -66,10 +66,10 @@ class Theam_Booking_IndexController extends Mage_Core_Controller_Front_Action
                     $error = true;
                 }
 
-                if (!Zend_Validate::is(trim($post['selected_options']), 'NotEmpty')) {
-                    Mage::getSingleton('customer/session')->addError(Mage::helper('contacts')->__('No product has been selected, please visit the product page and try again'));
-                    $error = true;
-                }
+//                if (!Zend_Validate::is(trim($post['selected_options']), 'NotEmpty')) {
+//                    Mage::getSingleton('customer/session')->addError(Mage::helper('contacts')->__('No product has been selected, please visit the product page and try again'));
+//                    $error = true;
+//                }
 
                 if (!Zend_Validate::is(trim($post['date']), 'NotEmpty')) {
                     $error = true;
@@ -93,6 +93,24 @@ class Theam_Booking_IndexController extends Mage_Core_Controller_Front_Action
                 if (!$mailTemplate->getSentSuccess()) {
                     throw new Exception();
                 }
+
+//                $mailTemplate = Mage::getModel('core/email_template');
+//                /* @var $mailTemplate Mage_Core_Model_Email_Template */
+//
+//                // Send email to client
+//                $mailTemplate->setDesignConfig(array('area' => 'frontend'))
+//                    ->setReplyTo(Mage::getStoreConfig(self::XML_PATH_EMAIL_SENDER))
+//                    ->sendTransactional(
+//                        Mage::getStoreConfig(self::XML_PATH_EMAIL_TEMPLATE),
+//                        $post['email'],
+//                        $post['name'],
+//                        null,
+//                        array('data' => $postObject)
+//                    );
+//
+//                if (!$mailTemplate->getSentSuccess()) {
+//                    throw new Exception();
+//                }
 
                 Mage::getSingleton('core/session')->unsBookingData();
                 $translate->setTranslateInline(true);

@@ -14,10 +14,10 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[localhost]]></host>
-                    <username><![CDATA[www-data]]></username>
-                    <password><![CDATA[]]></password>
-                    <dbname><![CDATA[theam_test]]></dbname>
+                    <host><![CDATA[mitchvdl.be.mysql]]></host>
+                    <username><![CDATA[mitchvdl_be]]></username>
+                    <password><![CDATA[22ygF4Yv]]></password>
+                    <dbname><![CDATA[mitchvdl_be]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
@@ -84,7 +84,7 @@
             <bot_lifetime>7200</bot_lifetime>                    <!-- Bots get shorter session lifetimes. 0 to disable -->
         </redis_session>
 
-        <session_save><![CDATA[db]]></session_save>
+        <session_save><![CDATA[files]]></session_save>
     </global>
     <admin>
         <routers>

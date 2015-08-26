@@ -47,8 +47,8 @@
         <template>
             <email>
                 <theam_booking_email_email_template translate="label" module="theam_booking">
-                    <label>Contact Form</label>
-                    <file>contact_form.html</file>
+                    <label>Booking Contact Form</label>
+                    <file>theam/booking/contact_form.html</file>
                     <type>text</type>
                 </theam_booking_email_email_template>
             </email>
@@ -83,7 +83,7 @@
     </adminhtml>
 
     <default>
-        <contacts>
+        <theam_booking>
             <contacts>
                 <enabled>1</enabled>
             </contacts>
@@ -92,6 +92,6 @@
                 <sender_email_identity>custom2</sender_email_identity>
                 <email_template>theam_booking_email_email_template</email_template>
             </email>
-        </contacts>
+        </theam_booking>
     </default>
 </config>
